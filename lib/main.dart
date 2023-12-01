@@ -1,9 +1,14 @@
+import 'package:alura_flutter_client_control1/models/clients.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'pages/client_types_page.dart';
 import 'pages/clients_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => Clients(clients: []),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
