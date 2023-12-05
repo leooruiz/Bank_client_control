@@ -42,7 +42,7 @@ class _ClientTypesPageState extends State<ClientTypesPage> {
               ),
               onDismissed: (direction) {
                 setState(() {
-                  list.types.removeAt(index);
+                  list.remove(index);// TODO: add remove METHOD
                 });
               },
             );

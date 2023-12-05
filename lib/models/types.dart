@@ -13,5 +13,9 @@ class Types extends ChangeNotifier {
     notifyListeners(); //It warns the ChangeNotifier, that reloads the screen
   }
 
-  // método de remoção.
+  void remove(int index) {
+    types.removeAt(index);
+    notifyListeners();
+  }
+
 }

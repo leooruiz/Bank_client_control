@@ -13,5 +13,9 @@ class Clients extends ChangeNotifier {
     notifyListeners(); //It warns the ChangeNotifier, that reloads the screen
   }
 
-  //método remove
+  void remove(int index) {
+    clients.removeAt(index);
+    notifyListeners();
+  }
+
 }
